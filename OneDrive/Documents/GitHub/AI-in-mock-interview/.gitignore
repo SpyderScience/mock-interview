@@ -1,11 +1,3 @@
-.VirtualBox/ 
-.cache/ 
-.conda/ 
-.docker/ 
-.ipynb_checkpoints/ 
-.vscode/ 
-AppData/ 
-**/*.ipynb   # Ignore all IPython notebooks
-node_modules/ 
-**/*.log     # Ignore log files
-venv/        # Ignore virtual environment
+"*"        # Ignore everything
+"!/ai_mock_interview/"   # But not this folder
+"!/ai_mock_interview/.next/**"   # Track all files inside .next
