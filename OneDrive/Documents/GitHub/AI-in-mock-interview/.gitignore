@@ -1,3 +1,0 @@
-"*"        # Ignore everything
-"!/ai_mock_interview/"   # But not this folder
-"!/ai_mock_interview/.next/**"   # Track all files inside .next
