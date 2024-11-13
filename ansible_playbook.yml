@@ -1,14 +1,11 @@
-#example of basic ansible playbook yaml file
----
-- name: Configure web servers
-  hosts: webservers
-  become: yes  # Run as root (sudo)
+#basic structure of ansible playbook file 
+- name: Install curl
+  hosts: local
+  become: true
+  gather_facts: no  # Disable fact gathering
   tasks:
-    - name: Install Apache
-      apt:
-        name: apache2
+    - name: Ensure curl is installed
+      ansible.builtin.apt:
+        name: curl
         state: present
-    - name: Start Apache service
-      service:
-        name: apache2
-        state: started
+        update_cache: yes
