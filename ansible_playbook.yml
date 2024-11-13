@@ -1,0 +1,14 @@
+#example of basic ansible playbook yaml file
+---
+- name: Configure web servers
+  hosts: webservers
+  become: yes  # Run as root (sudo)
+  tasks:
+    - name: Install Apache
+      apt:
+        name: apache2
+        state: present
+    - name: Start Apache service
+      service:
+        name: apache2
+        state: started
